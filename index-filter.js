@@ -43,12 +43,16 @@ const students = [
 
 const passingScore = 60;
 
-const passingStudents = students.filter((student) => {
+function isPassingStudent(student) {
 	return student.grade >= passingScore;
-});
+}
 
-const namesOfPassingStudents = passingStudents.map((student) => {
+const passingStudents = students.filter(isPassingStudent);
+
+function getNamesOfPassingStudents(student) {
 	return student.name;
-});
+}
+
+const namesOfPassingStudents = passingStudents.map(getNamesOfPassingStudents);
 
 console.log(namesOfPassingStudents);
