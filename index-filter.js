@@ -43,16 +43,12 @@ const students = [
 
 const passingScore = 60;
 
-function getPassingStudents(students) {
-	let passingStudents = [];
+const passingStudents = students.filter((student) => {
+	return student.grade >= passingScore;
+});
 
-	students.forEach((student) => {
-		if (student.grade >= passingScore) {
-			passingStudents.push(student.name);
-		}
-	});
+const namesOfPassingStudents = passingStudents.map((student) => {
+	return student.name;
+});
 
-	return passingStudents;
-}
-
-console.log(getPassingStudents(students));
+console.log(namesOfPassingStudents);
