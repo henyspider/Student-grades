@@ -47,10 +47,10 @@ function getPassingStudents (arr){
 
     let passingStudents = [];
 
-    for (let i = 0; i < arr.length; i++){
+    for (const obj of arr){
 
-        if (arr[i].grade >= passingScore){
-            passingStudents.push(arr[i].name)
+        if (obj.grade >= passingScore){
+            passingStudents.push(obj.name)
         }
     }
 
