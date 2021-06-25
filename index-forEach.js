@@ -46,11 +46,11 @@ const passingScore = 60;
 function getPassingStudents(students) {
 	let passingStudents = [];
 
-	for (const student of students) {
+	students.forEach((student) => {
 		if (student.grade >= passingScore) {
 			passingStudents.push(student.name);
 		}
-	}
+	});
 
 	return passingStudents;
 }
