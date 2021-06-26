@@ -49,4 +49,10 @@ const getTheHighestScore = students
 	.map((student) => student.grade)
 	.reduce(highestScore);
 
-console.log(getTheHighestScore);
+const getNameOfHighestScoreStudent = students
+	.filter((student) => student.grade >= getTheHighestScore)
+	.map((student) => student.name);
+
+console.log(
+	`The student with the highest score is: ${getNameOfHighestScoreStudent}, with a score of ${getTheHighestScore}`
+);
