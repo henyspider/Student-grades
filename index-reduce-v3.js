@@ -50,7 +50,7 @@ const getTheHighestScore = students
 	.reduce(highestScore);
 
 const getNameOfHighestScoreStudent = students
-	.filter((student) => student.grade >= getTheHighestScore)
+	.filter((student) => student.grade === getTheHighestScore)
 	.map((student) => student.name);
 
 console.log(
