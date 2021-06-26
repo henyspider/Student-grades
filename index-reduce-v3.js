@@ -47,12 +47,6 @@ const highestScore = (scoreA, scoreB) => Math.max(scoreA, scoreB);
 const getTheHighestScore = students
 	.filter((student) => student.grade >= passingScore)
 	.map((student) => student.grade)
-	.reduce(highestScore);
+	.reduce(highestScore, 0);
 
-const getNameOfHighestScoreStudent = students
-	.filter((student) => student.grade === getTheHighestScore)
-	.map((student) => student.name);
-
-console.log(
-	`The student with the highest score is: ${getNameOfHighestScoreStudent}, with a score of ${getTheHighestScore}`
-);
+console.log(`The highest score is: ${getTheHighestScore}`);
