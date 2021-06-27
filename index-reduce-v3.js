@@ -50,12 +50,3 @@ const getTheSumOfTheScores = students
 	.reduce(sumOfTheScores, 0);
 
 console.log(`The sum of the scores is: ${getTheSumOfTheScores}`);
-
-//Get the passing one total score
-//const sumOfTheScores = (scoreA, scoreB) => scoreA + scoreB;
-/*const getTheSumOfTheScores = students
-	.filter((student) => student.grade >= passingScore)
-	.map((student) => student.grade)
-	.reduce(sumOfTheScores, 0);
-
-console.log(`The sum of the scores is: ${getTheSumOfTheScores}`);*/
