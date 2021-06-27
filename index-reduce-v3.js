@@ -42,11 +42,20 @@ const students = [
 ];
 
 const passingScore = 60;
-const highestScore = (scoreA, scoreB) => Math.max(scoreA, scoreB);
+const sumOfTheScores = (studentGradeA, studentGradeB) =>
+	studentGradeA + studentGradeB;
 
-const getTheHighestScore = students
+const getTheSumOfTheScores = students
+	.map((students) => students.grade)
+	.reduce(sumOfTheScores, 0);
+
+console.log(`The sum of the scores is: ${getTheSumOfTheScores}`);
+
+//Get the passing one total score
+//const sumOfTheScores = (scoreA, scoreB) => scoreA + scoreB;
+/*const getTheSumOfTheScores = students
 	.filter((student) => student.grade >= passingScore)
 	.map((student) => student.grade)
-	.reduce(highestScore, 0);
+	.reduce(sumOfTheScores, 0);
 
-console.log(`The highest score is: ${getTheHighestScore}`);
+console.log(`The sum of the scores is: ${getTheSumOfTheScores}`);*/
