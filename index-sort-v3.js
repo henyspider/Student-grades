@@ -47,6 +47,8 @@ const sortGradesDescending = students
 	.sort((studentA, studentB) => studentB.grade - studentA.grade)
 	.map((student) => student.grade);
 
-const sortNamesAlphabetically = students.map((student) => student.name).sort();
+const sortNamesAlphabetically = students
+	.sort((studentA, studentB) => (studentA.name < studentB.name ? -1 : 1))
+	.map((student) => student.name);
 
 console.log(sortGradesDescending, sortNamesAlphabetically);
