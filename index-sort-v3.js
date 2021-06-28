@@ -43,10 +43,10 @@ const students = [
 
 const passingScore = 60;
 
-const studentsSortedByHighestScore = students
+const sortGradesDescending = students
 	.sort((studentA, studentB) => studentB.grade - studentA.grade)
 	.map((student) => student.grade);
 
 const sortNamesAlphabetically = students.map((student) => student.name).sort();
 
-console.log(studentsSortedByHighestScore, sortNamesAlphabetically);
+console.log(sortGradesDescending, sortNamesAlphabetically);
