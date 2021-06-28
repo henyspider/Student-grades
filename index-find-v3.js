@@ -49,7 +49,7 @@ function findStudentByName(studentName) {
 			return student;
 		}
 	}
-	return false;
+	return null;
 }
 
 function findIndexOfStudentByName(studentName) {
@@ -58,7 +58,7 @@ function findIndexOfStudentByName(studentName) {
 			return students.indexOf(student);
 		}
 	}
-	return false;
+	return -1;
 }
 
 console.log(findStudentByName("Alex"), findIndexOfStudentByName("Alex")); //{name: 'Alex', grade: 86} 8
